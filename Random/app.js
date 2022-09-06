@@ -7,7 +7,7 @@ document.getElementById("start-btn").addEventListener("click", function(e){
         e.preventDefault();
     }
 
-    intro = setInterval(function() {
+    intro = setInterval(() => {
         elem.textContent = Math.floor(Math.random() * 101);
     },100);
 });
