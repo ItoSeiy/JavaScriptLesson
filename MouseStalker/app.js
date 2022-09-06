@@ -10,6 +10,12 @@ mouseY = 0, //マウスのY座標
 posX = 0, //フォロワーのX座標
 posY = 0; //フォロワーのX座標
 
+const imagesUrl = ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
+                "https://docs.microsoft.com/ja-jp/windows/images/csharp-logo.png",
+                "https://wp-doctor.jp/blog/wp-content/uploads/2017/09/javascript.png",
+                "https://seeklogo.com/images/E/elixir-logo-CF24E6FA55-seeklogo.com.png"
+                ]
+
 //マウス座標を取得
 $(document).on("mousemove", function(e) {
     mouseX = e.pageX;
@@ -60,6 +66,10 @@ $("button").on({
         cursor.removeClass("is-active");
         follower.removeClass("is-active");
     }
+});
+
+$("body").on("click", function() {
+    follower.attr("src", imagesUrl[Math.floor(Math.random() * imagesUrl.length)]);
 });
 
 document.getElementById("btn-a-tag").addEventListener("click",e => {

@@ -42,8 +42,6 @@ body, a {
     justify-content: center;
     align-items: center;
     width: 40px;
-    height: 40px;
-    background-color: rgba(253, 254, 0, 0.5);
     z-index: 1000;        /*カーソル要素よりも一つ下になるようにする*/
     transition: transform ease 0.1s;
     text-align: center;
