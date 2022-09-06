@@ -1,5 +1,5 @@
 /* マウスストーカー javascript */
-var
+let
 cursor = $(".cursor"),
 follower = $(".follower"),
 cWidth = 8, //カーソルの大きさ
@@ -9,8 +9,15 @@ mouseX = 0, //マウスのX座標
 mouseY = 0, //マウスのY座標
 posX = 0, //フォロワーのX座標
 posY = 0; //フォロワーのX座標
+
+//マウス座標を取得
+$(document).on("mousemove", function(e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+});
+
 //カーソルの遅延アニメーション
-//ほんの少ーーーしだけ遅延させる 0.001秒
+//遅延させる
 TweenMax.to({}, .001, {
     repeat: -1,
     onRepeat: function() {
@@ -32,11 +39,7 @@ TweenMax.to({}, .001, {
         });
     }
 });
-//マウス座標を取得
-$(document).on("mousemove", function(e) {
-    mouseX = e.pageX;
-    mouseY = e.pageY;
-});
+
 $("a").on({
     "mouseenter": function() {
         cursor.addClass("is-active");
@@ -45,5 +48,23 @@ $("a").on({
     "mouseleave": function() {
         cursor.removeClass("is-active");
         follower.removeClass("is-active");
+    }
+});
+
+$("button").on({
+    "mouseenter": function() {
+        cursor.addClass("is-active");
+        follower.addClass("is-active");
+    },
+    "mouseleave": function() {
+        cursor.removeClass("is-active");
+        follower.removeClass("is-active");
+    }
+});
+
+document.getElementById("btn-a-tag").addEventListener("click",e => {
+    if(e.cancelable) {
+        // デフォルトの挙動をキャンセル
+        e.preventDefault();
     }
 });
