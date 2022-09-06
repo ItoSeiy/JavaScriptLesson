@@ -64,7 +64,7 @@ $("button").on({
 
 document.getElementById("btn-a-tag").addEventListener("click",e => {
     if(e.cancelable) {
-        // デフォルトの挙動をキャンセル
+        // デフォルトのページ読み込みの挙動をキャンセル
         e.preventDefault();
     }
 });

@@ -3,7 +3,7 @@ let intro = null;
 
 document.getElementById("start-btn").addEventListener("click",e => {
     if(e.cancelable) {
-        // デフォルトの挙動をキャンセル
+        // デフォルトのページ読み込みの挙動をキャンセル
         e.preventDefault();
     }
 
@@ -14,7 +14,7 @@ document.getElementById("start-btn").addEventListener("click",e => {
 
 document.getElementById("stop-btn").addEventListener("click", e => {
     if(e.cancelable) {
-        // デフォルトの挙動をキャンセル
+        // デフォルトのページ読み込みの挙動をキャンセル
         e.preventDefault();
     }
     clearInterval(intro);
