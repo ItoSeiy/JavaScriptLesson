@@ -3,7 +3,7 @@
 
 //htmlとjsをつなぐ。
 const elem = document.querySelector("#greetmsg");
-const greet = "こんにちは！ようこそ〇〇の世界へ。冒険の始まりです";
+const greet = "こんにちは！ようこそ〇〇の世界へ。冒険の始まりです。";
 
 //greetの文字を分割する→split()
 //配列に1文字ずつ入れるような分割の仕方。
