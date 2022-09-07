@@ -1,2 +1,1 @@
-docs/* -linguist-vendored
-docs/* -linguist-documentation
+*.js linguist-detectable=true
